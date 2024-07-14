@@ -5,7 +5,7 @@ import plotly.express as px
 import pandas as pd
 
 # Cargar el dataset
-file_path = 'app/Pokemon.csv'
+file_path = '/home/Loboguerra/app/Pokemon.csv'
 pokemon_df = pd.read_csv(file_path)
 
 # Verificar los nombres de las columnas
