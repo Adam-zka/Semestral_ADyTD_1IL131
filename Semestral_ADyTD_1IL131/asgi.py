@@ -1,5 +1,5 @@
 """
-ASGI config for dashboard_proy project.
+ASGI config for Semestral_ADyTD_1IL131 project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "dashboard_proy.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "Semestral_ADyTD_1IL131.settings")
 
 application = get_asgi_application()
