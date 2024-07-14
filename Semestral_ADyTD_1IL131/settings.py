@@ -37,7 +37,11 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    'dashboard',
+    'django_plotly_dash.apps.DjangoPlotlyDashConfig',
+    'django.contrib.staticfiles',  # Required for serving static files
+    'dashboard',  # Your Django app
+    'channels',  # Required for Django-Plotly-Dash
+    'dpd_static_support',  # Required for static serving
 ]
 
 MIDDLEWARE = [
@@ -48,6 +52,8 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    'django_plotly_dash.middleware.BaseMiddleware',
+    'django_plotly_dash.middleware.ExternalRedirectionMiddleware',
 ]
 
 ROOT_URLCONF = "Semestral_ADyTD_1IL131.urls"
@@ -68,7 +74,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "Semestral_ADyTD_1IL131.wsgi.application"
+# WSGI_APPLICATION = "Semestral_ADyTD_1IL131.wsgi.application"
+ASGI_APPLICATION = 'Semestral_ADyTD_1IL131.routing.application'
 
 
 # Database
@@ -117,7 +124,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = "static/"
-STATIC_ROOT = BASE_DIR / 'static'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

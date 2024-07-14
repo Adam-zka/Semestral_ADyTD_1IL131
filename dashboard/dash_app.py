@@ -1,18 +1,15 @@
+from dash import Dash, dcc, html
 import dash
-from dash import dcc, html
 from dash.dependencies import Input, Output
 import plotly.express as px
 import pandas as pd
+from django_plotly_dash import DjangoDash
+
+app = DjangoDash('PokemonDashboard')  # Reemplaza Dash por DjangoDash
 
 # Cargar el dataset
-file_path = '/home/Loboguerra/Semestral_ADyTD_1IL131/Pokemon.csv'
+file_path = 'Semestral_ADyTD_1IL131/Pokemon.csv'
 pokemon_df = pd.read_csv(file_path)
-
-# Verificar los nombres de las columnas
-print(pokemon_df.columns)
-
-# Inicializar la app Dash
-app = dash.Dash(__name__, server=False, routes_pathname_prefix='/dash/')
 
 # Layout de la app
 app.layout = html.Div([
