@@ -1,15 +1,18 @@
-from dash import Dash, dcc, html
 import dash
+from dash import dcc, html
 from dash.dependencies import Input, Output
 import plotly.express as px
 import pandas as pd
-from django_plotly_dash import DjangoDash
-
-app = DjangoDash('PokemonDashboard')  # Reemplaza Dash por DjangoDash
 
 # Cargar el dataset
-file_path = '/dashboard/Pokemon.csv'
+file_path = 'app/Pokemon.csv'
 pokemon_df = pd.read_csv(file_path)
+
+# Verificar los nombres de las columnas
+print(pokemon_df.columns)
+
+# Inicializar la app Dash
+app = dash.Dash(__name__)
 
 # Layout de la app
 app.layout = html.Div([
@@ -68,3 +71,8 @@ def update_heatmap(tab):
     fig = px.imshow(
         corr_matrix, title='Matriz de Correlación entre Estadísticas')
     return fig
+
+
+# Ejecutar la app
+if __name__ == '__main__':
+    app.run_server(debug=True)
