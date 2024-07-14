@@ -8,7 +8,7 @@ from django_plotly_dash import DjangoDash
 app = DjangoDash('PokemonDashboard')  # Reemplaza Dash por DjangoDash
 
 # Cargar el dataset
-file_path = 'Semestral_ADyTD_1IL131/Pokemon.csv'
+file_path = 'Pokemon.csv'
 pokemon_df = pd.read_csv(file_path)
 
 # Layout de la app
