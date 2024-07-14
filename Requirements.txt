@@ -1,3 +1,7 @@
+Django
+django-plotly-dash
 dash
 pandas
 plotly
+channels
+daphne
