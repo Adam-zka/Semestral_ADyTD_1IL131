@@ -5,14 +5,14 @@ import plotly.express as px
 import pandas as pd
 
 # Cargar el dataset
-file_path = 'Pokemon.csv'
+file_path = '/home/Loboguerra/Semestral_ADyTD_1IL131/Pokemon.csv'
 pokemon_df = pd.read_csv(file_path)
 
 # Verificar los nombres de las columnas
 print(pokemon_df.columns)
 
 # Inicializar la app Dash
-app = dash.Dash(__name__)
+app = dash.Dash(__name__, server=False, routes_pathname_prefix='/dash/')
 
 # Layout de la app
 app.layout = html.Div([
