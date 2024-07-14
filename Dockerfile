@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 8000
 
 # Define el comando por defecto para ejecutar la aplicación
-CMD ["daphne", "-b", "0.0.0.0", "-p", "8000", "myproject.asgi:application"]
+CMD ["daphne", "-b", "0.0.0.0", "-p", "8000", "Semestral_ADyTD_1IL131.asgi:application"]

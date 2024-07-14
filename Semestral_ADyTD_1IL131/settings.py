@@ -74,7 +74,7 @@ TEMPLATES = [
     },
 ]
 
-# WSGI_APPLICATION = "Semestral_ADyTD_1IL131.wsgi.application"
+WSGI_APPLICATION = "Semestral_ADyTD_1IL131.wsgi.application"
 ASGI_APPLICATION = 'Semestral_ADyTD_1IL131.routing.application'
 
 

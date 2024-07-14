@@ -1,15 +1,13 @@
-<!-- dashboard/templates/dashboard/dash.html -->
+<!-- dashboard/templates/dashboard/index.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Dashboard de Análisis de Pokémon</title>
-    {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <meta charset="UTF-8">
+    <title>Dashboard de Pokémon</title>
+    {% load plotly_dash %}
 </head>
 <body>
-    <div id="dash-container">
-        {% csrf_token %}
-        {{ dash_app | safe }}
-    </div>
+    <h1>Dashboard de Pokémon</h1>
+    {% plotly_app name="PokemonDashboard" %}
 </body>
 </html>
