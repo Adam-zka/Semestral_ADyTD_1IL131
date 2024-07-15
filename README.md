@@ -1,4 +1,4 @@
-﻿“Dashboard de Análisis de Pokémon”
+﻿# “Dashboard de Análisis de Pokémon”
 
 La implementación realiza un análisis completo de datos de Pokémon desde la carga y limpieza de datos, incluyendo la introducción y manejo de datos faltantes, hasta el análisis exploratorio con gráficos de distribución y boxplots. 
 
